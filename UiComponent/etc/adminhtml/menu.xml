@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Scommerce_UiComponent::menu" title="Training Ui Component" module="Scommerce_UiComponent" resource="Scommerce_UiComponent::menu" parent="Magento_Catalog::catalog" sortOrder="10"/>
+        <add id="Scommerce_UiComponent::grid" title="Training Ui Component Grid" module="Scommerce_UiComponent" resource="Scommerce_UiComponent::grid" action="scommerce/uicomponent/grid" parent="Scommerce_UiComponent::menu" sortOrder="10"/>
+    </menu>
+</config>
