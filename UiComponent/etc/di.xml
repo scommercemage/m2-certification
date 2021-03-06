@@ -21,4 +21,25 @@
             <argument name="resourceModel" xsi:type="string">Scommerce\UiComponent\Model\ResourceModel\TrainingContact</argument>
         </arguments>
     </type>
+    <preference for="Scommerce\UiComponent\Api\Data\TrainingContactSearchResultsInterface"
+                type="Scommerce\UiComponent\Model\TrainingContactSearchResults" />
+    <preference for="Scommerce\UiComponent\Api\Data\TrainingContactInterface"
+                type="Scommerce\UiComponent\Model\TrainingContact" />
+    <preference for="Scommerce\UiComponent\Api\TrainingContactRepositoryInterface"
+                type="Scommerce\UiComponent\Model\TrainingContactRepository" />
+
+    <virtualType name="Scommerce\UiComponent\Model\Api\SearchCriteria\PageCollectionProcessor" type="Magento\Framework\Api\SearchCriteria\CollectionProcessor">
+        <arguments>
+            <argument name="processors" xsi:type="array">
+                <item name="sorting" xsi:type="object">Magento\Framework\Api\SearchCriteria\CollectionProcessor\SortingProcessor</item>
+                <item name="pagination" xsi:type="object">Magento\Framework\Api\SearchCriteria\CollectionProcessor\PaginationProcessor</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Scommerce\UiComponent\Model\TrainingContactRepository">
+        <arguments>
+            <argument name="collectionProcessor" xsi:type="object">Scommerce\UiComponent\Model\Api\SearchCriteria\PageCollectionProcessor</argument>
+        </arguments>
+    </type>
 </config>

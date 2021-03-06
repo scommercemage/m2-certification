@@ -10,7 +10,6 @@
 namespace Scommerce\Routing\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
-use Scommerce\Core\Helper\Data as CoreHelper;
 use Magento\Framework\App\Helper\Context;
 use Magento\Framework\Model\Exception;
 use Magento\Store\Model\ScopeInterface;
@@ -32,24 +31,6 @@ class Data extends AbstractHelper
     const LICENSE_KEY = 'routing/general/license_key';
 
     /**
-     * @var CoreHelper
-     */
-    protected $_coreHelper;
-
-    /**
-     * @param Context $context
-     * @param CoreHelper $coreHelper
-     */
-    public function __construct(
-        Context $context,
-        CoreHelper $coreHelper
-    )
-    {
-        $this->_coreHelper = $coreHelper;
-        parent::__construct($context);
-    }
-
-    /**
      * returns whether module is enabled or not
      * @param int $storeId
      * @return boolean
@@ -57,7 +38,7 @@ class Data extends AbstractHelper
     public function isEnabled($storeId = null)
     {
         $enabled = $this->isSetFlag(self::ENABLED,ScopeInterface::SCOPE_STORE, $storeId);
-        return $this->isCliMode() ? $enabled : $enabled && $this->isLicenseValid();
+        return $this->isCliMode() ? $enabled : $enabled;
     }
 
     /**
@@ -104,16 +85,5 @@ class Data extends AbstractHelper
     protected function isSetFlag($path, $scopeType = ScopeInterface::SCOPE_STORE, $scopeCode = null)
     {
         return $this->scopeConfig->isSetFlag($path, $scopeType, $scopeCode);
-    }
-
-    /**
-     * Returns whether license key is valid or not
-     *
-     * @return bool
-     */
-    public function isLicenseValid()
-    {
-        $sku = strtolower(str_replace('\\Helper\\Data', '', str_replace('Scommerce\\', '', get_class())));
-        return $this->_coreHelper->isLicenseValid($this->getLicenseKey(), $sku);
     }
 }

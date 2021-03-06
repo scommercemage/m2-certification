@@ -40,4 +40,68 @@ class TrainingContact extends AbstractModel implements TrainingContactInterface,
     {
         $this->_init('Scommerce\UiComponent\Model\ResourceModel\TrainingContact');
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getName()
+    {
+        return parent::getData(self::NAME);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAboutMe()
+    {
+        return parent::getData(self::ABOUT_ME);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDateOfBirth()
+    {
+        return parent::getData(self::DOB);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getIsActive()
+    {
+        return parent::getData(self::ACTIVE);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setName($name)
+    {
+        return $this->setData(self::NAME, $name);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setAboutMe($aboutme)
+    {
+        return $this->setData(self::ABOUT_ME, $aboutme);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        return $this->setData(self::DOB, $dateOfBirth);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setIsActive($isActive)
+    {
+        return $this->setData(self::ACTIVE, $isActive);
+    }
 }

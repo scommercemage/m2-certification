@@ -166,17 +166,12 @@
                 <label translate="true">Date Of Birth</label>
             </settings>
         </column>
-        <column name="about_me">
-            <settings>
-                <label translate="true">About Me</label>
-            </settings>
-        </column>
         <column name="resume">
             <settings>
                 <label translate="true">Resume</label>
             </settings>
         </column>
-        <column name="active">
+        <column name="is_active">
             <settings>
                 <label translate="true">Active</label>
             </settings>
@@ -328,12 +323,12 @@
 <!--                <visible>false</visible>-->
 <!--            </settings>-->
 <!--        </column>-->
-<!--        <actionsColumn name="actions" class="Magento\Cms\Ui\Component\Listing\Column\PageActions">-->
-<!--            <settings>-->
-<!--                <indexField>id</indexField>-->
-<!--                <resizeEnabled>false</resizeEnabled>-->
-<!--                <resizeDefaultWidth>107</resizeDefaultWidth>-->
-<!--            </settings>-->
-<!--        </actionsColumn>-->
+        <actionsColumn name="actions" class="Scommerce\UiComponent\Ui\Component\Listing\Column\TrainingContactActions">
+            <settings>
+                <indexField>id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>

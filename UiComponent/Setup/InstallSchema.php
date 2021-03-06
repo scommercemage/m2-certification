@@ -6,6 +6,7 @@ use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
+use Scommerce\UiComponent\Api\Data\TrainingContactInterface;
 
 /**
  * Class InstallSchema
@@ -13,8 +14,6 @@ use Magento\Framework\Setup\SchemaSetupInterface;
  */
 class InstallSchema implements InstallSchemaInterface
 {
-    const TRAINING_CONTACT = 'training_contact';
-
     /**
      * @param SchemaSetupInterface $setup
      * @param ModuleContextInterface $context
@@ -25,13 +24,14 @@ class InstallSchema implements InstallSchemaInterface
         $installer = $setup;
         $installer->startSetup();
 
-        $tableName = self::TRAINING_CONTACT;
+        $tableName = TrainingContactInterface::TABLE_NAME;
+
         if (!$installer->tableExists($tableName)) {
             $table = $installer->getConnection()->newTable(
                 $installer->getTable($tableName)
             )
                 ->addColumn(
-                    'id',
+                    TrainingContactInterface::ID,
                     Table::TYPE_INTEGER,
                     null,
                     [
@@ -43,40 +43,40 @@ class InstallSchema implements InstallSchemaInterface
                     'ID'
                 )
                 ->addColumn(
-                    'name',
+                    TrainingContactInterface::NAME,
                     Table::TYPE_TEXT,
                     255,
                     ['nullable => false']
                 )
                 ->addColumn(
-                    'image',
+                    TrainingContactInterface::IMAGE,
                     Table::TYPE_TEXT,
                     255
                 )
                 ->addColumn(
-                    'date_of_birth',
+                    TrainingContactInterface::DOB,
                     Table::TYPE_DATE
                 )
                 ->addColumn(
-                    'about_me',
+                    TrainingContactInterface::ABOUT_ME,
                     Table::TYPE_BLOB
                 )
                 ->addColumn(
-                    'resume',
+                    TrainingContactInterface::RESUME,
                     Table::TYPE_TEXT,
                     255
                 )
                 ->addColumn(
-                    'active',
+                    TrainingContactInterface::ACTIVE,
                     Table::TYPE_SMALLINT
                 )
                 ->addIndex(
-                    $installer->getIdxName($tableName, ['name']),
-                    ['name']
+                    $installer->getIdxName($tableName, [TrainingContactInterface::NAME]),
+                    [TrainingContactInterface::NAME]
                 )
                 ->addIndex(
-                    $installer->getIdxName($tableName, ['date_of_birth']),
-                    ['date_of_birth']
+                    $installer->getIdxName($tableName, [TrainingContactInterface::DOB]),
+                    [TrainingContactInterface::DOB]
                 );
 
             $installer->getConnection()->createTable($table);
