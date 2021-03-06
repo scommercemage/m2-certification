@@ -3,7 +3,7 @@
  * Scommerce routing helper class for common functions and retrieving configuration values
  *
  * @category   Scommerce
- * @package    Scommerce_Tutorial
+ * @package    Scommerce_Routing
  * @author     Scommerce Mage <core@scommerce-mage.com>
  */
 

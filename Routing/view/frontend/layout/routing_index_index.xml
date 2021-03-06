@@ -8,7 +8,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Scommerce\Routing\Block\Index" name="tutorial_index_index" template="Scommerce_Tutorial::index.phtml" />
+            <block class="Scommerce\Routing\Block\Index" name="routing_index_index" template="Scommerce_Routing::index.phtml" />
         </referenceContainer>
         <referenceBlock name="catalog.compare.sidebar" remove="true" />
         <referenceBlock name="wishlist_sidebar" remove="true" />

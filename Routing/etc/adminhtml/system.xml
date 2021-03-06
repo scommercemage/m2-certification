@@ -3,7 +3,7 @@
 /**
  * Scommerce Routing Module configuration file for defining all configurations required for this module
  * @category   Scommerce
- * @package    Scommerce_Tutorial
+ * @package    Scommerce_Routing
  * @author     Scommerce Mage <core@scommerce-mage.com>
  */
 -->
@@ -23,7 +23,7 @@
             <label>Routing</label>
             <tab>scommerce</tab>
             <!-- resource tag name which we have to defined in the acl.xml -->
-            <resource>Scommerce_Tutorial::config_tutorial</resource>
+            <resource>Scommerce_Routing::config_routing</resource>
             <group id="general"
                    translate="label comment"
                    type="text"
