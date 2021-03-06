@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scommerce Tutorial Module module file for define module name and version of the module
+ * @category   Scommerce
+ * @package    Scommerce_Tutorial
+ * @author     Scommerce Mage <core@scommerce-mage.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Scommerce_Tutorial" setup_version="2.0.0" />
+</config>

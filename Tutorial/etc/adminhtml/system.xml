@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scommerce Tutorial Module configuration file for defining all configurations required for this module
+ * @category   Scommerce
+ * @package    Scommerce_Tutorial
+ * @author     Scommerce Mage <core@scommerce-mage.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="scommerce" translate="label comment" sortOrder="100">
+            <label>Scommerce Configuration</label>
+        </tab>
+        <section id="tutorial"
+                 translate="label comment"
+                 type="text"
+                 sortOrder="10"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Tutorial</label>
+            <tab>scommerce</tab>
+            <!-- resource tag name which we have to defined in the acl.xml -->
+            <resource>Scommerce_Tutorial::config_tutorial</resource>
+            <group id="general"
+                   translate="label comment"
+                   type="text"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>General</label>
+                <field id="enabled"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[This setting will be used to enable or disable module]]></comment>
+                </field>
+                <field id="license_key"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="20"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>License Key</label>
+                    <comment><![CDATA[This setting will be used to verify your license key for the given domain <div style='color:#ff0000;font-size:10px;font-weight:bold'>N.B. License keys are domain specific so for your testing or staging sites please email us at core@scommerce-mage.com</div>]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
