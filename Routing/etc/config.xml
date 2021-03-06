@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Scommerce Tutorial Module default configuration file for setting all default values
+ * Scommerce Routing Module default configuration file for setting all default values
  * @category   Scommerce
  * @package    Scommerce_Tutorial
  * @author     Scommerce Mage <core@scommerce-mage.com>
@@ -9,11 +9,11 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <tutorial>
+        <routing>
             <general>
                 <enabled>1</enabled>
                 <license_key>[Check your order confirmation email for license key]</license_key>
             </general>
-        </tutorial>
+        </routing>
     </default>
 </config>

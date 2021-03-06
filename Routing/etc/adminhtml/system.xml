@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Scommerce Tutorial Module configuration file for defining all configurations required for this module
+ * Scommerce Routing Module configuration file for defining all configurations required for this module
  * @category   Scommerce
  * @package    Scommerce_Tutorial
  * @author     Scommerce Mage <core@scommerce-mage.com>
@@ -13,14 +13,14 @@
         <tab id="scommerce" translate="label comment" sortOrder="100">
             <label>Scommerce Configuration</label>
         </tab>
-        <section id="tutorial"
+        <section id="routing"
                  translate="label comment"
                  type="text"
                  sortOrder="10"
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">
-            <label>Tutorial</label>
+            <label>Routing</label>
             <tab>scommerce</tab>
             <!-- resource tag name which we have to defined in the acl.xml -->
             <resource>Scommerce_Tutorial::config_tutorial</resource>

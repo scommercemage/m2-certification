@@ -1,6 +1,6 @@
 <?php
 /**
- * Scommerce Tutorial Module registration file for registering module in Magento 2
+ * Scommerce Routing Module registration file for registering module in Magento 2
  *
  * @category   Scommerce
  * @package    Scommerce_Tutorial

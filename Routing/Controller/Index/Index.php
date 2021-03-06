@@ -1,6 +1,6 @@
 <?php
 
-namespace Scommerce\Tutorial\Controller\Index;
+namespace Scommerce\Routing\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -8,7 +8,7 @@ use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\RequestInterface;
 
 /**
- * Processes request to tutorial or learning
+ * Processes request to routing or learning
  */
 class Index extends Action
 {

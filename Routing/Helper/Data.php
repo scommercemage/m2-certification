@@ -1,13 +1,13 @@
 <?php
 /**
- * Scommerce tutorial helper class for common functions and retrieving configuration values
+ * Scommerce routing helper class for common functions and retrieving configuration values
  *
  * @category   Scommerce
  * @package    Scommerce_Tutorial
  * @author     Scommerce Mage <core@scommerce-mage.com>
  */
 
-namespace Scommerce\Tutorial\Helper;
+namespace Scommerce\Routing\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Scommerce\Core\Helper\Data as CoreHelper;
@@ -22,14 +22,14 @@ class Data extends AbstractHelper
      *
      * @var bool
      */
-    const ENABLED = 'tutorial/general/enabled';
+    const ENABLED = 'routing/general/enabled';
 
     /**
      * variable to get licence key
      *
      * @var string
      */
-    const LICENSE_KEY = 'tutorial/general/license_key';
+    const LICENSE_KEY = 'routing/general/license_key';
 
     /**
      * @var CoreHelper

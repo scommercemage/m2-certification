@@ -1,5 +1,5 @@
 <?php
-namespace Scommerce\Tutorial\Block;
+namespace Scommerce\Routing\Block;
 class Index extends \Magento\Framework\View\Element\Template
 {
 

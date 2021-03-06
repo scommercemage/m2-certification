@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Scommerce Tutorial Module ACL file for defining permission for menus, configuration and individual actions
+ * Scommerce Routing Module ACL file for defining permission for menus, configuration and individual actions
  * @category   Scommerce
  * @package    Scommerce_Tutorial
  * @author     Scommerce Mage <core@scommerce-mage.com>
@@ -14,7 +14,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Scommerce_Tutorial::config_tutorial" title="Scommerce Tutorial Section" sortOrder="10" />
+                            <resource id="Scommerce_Tutorial::config_tutorial" title="Scommerce Routing Section" sortOrder="10" />
                         </resource>
                     </resource>
                 </resource>

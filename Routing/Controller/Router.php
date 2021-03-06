@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Scommerce\Tutorial\Controller;
+namespace Scommerce\Routing\Controller;
 
 use Magento\Framework\App\ActionFactory;
 use Magento\Framework\App\ActionInterface;
@@ -64,17 +64,17 @@ class Router implements RouterInterface
     {
         $identifier = trim($request->getPathInfo(), '/');
         if (strpos($identifier, 'learning') !== false) {
-            $modules = $this->routeConfig->getModulesByFrontName('tutorial');
+            $modules = $this->routeConfig->getModulesByFrontName('routing');
             if (empty($modules)) {
                 return null;
             }
             // set values only after all the checks are done
-            $request->setModuleName('tutorial');
+            $request->setModuleName('routing');
             $request->setControllerName('index');
             $request->setActionName('index');
 
             $request->setControllerModule($modules[0]);
-            $request->setRouteName($this->routeConfig->getRouteByFrontName('tutorial'));
+            $request->setRouteName($this->routeConfig->getRouteByFrontName('routing'));
 
             $actionClassName = $this->actionList->get($modules[0], null, 'index', 'index');
             return $this->actionFactory->create($actionClassName);
