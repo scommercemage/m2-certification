@@ -43,6 +43,13 @@ interface TrainingContactInterface
     public function getName();
 
     /**
+     * Get image
+     *
+     * @return string|null
+     */
+    public function getImage();
+
+    /**
      * Get page layout
      *
      * @return string|null
@@ -79,6 +86,14 @@ interface TrainingContactInterface
      * @return TrainingContactInterface
      */
     public function setName($name);
+
+    /**
+     * Set image
+     *
+     * @param string image
+     * @return TrainingContactInterface
+     */
+    public function setImage($image);
 
     /**
      * Set content

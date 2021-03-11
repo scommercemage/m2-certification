@@ -42,4 +42,24 @@
             <argument name="collectionProcessor" xsi:type="object">Scommerce\UiComponent\Model\Api\SearchCriteria\PageCollectionProcessor</argument>
         </arguments>
     </type>
+
+    <virtualType name="Scommerce\UiComponent\ImageUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">contact/images/</argument>
+            <argument name="basePath" xsi:type="string">contact/images/</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Scommerce\UiComponent\Controller\Adminhtml\Uicomponent\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Scommerce\UiComponent\ImageUpload</argument>
+        </arguments>
+    </type>
+
 </config>

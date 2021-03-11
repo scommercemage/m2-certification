@@ -52,6 +52,14 @@ class TrainingContact extends AbstractModel implements TrainingContactInterface,
     /**
      * @inheritDoc
      */
+    public function getImage()
+    {
+        return parent::getData(self::IMAGE);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getAboutMe()
     {
         return parent::getData(self::ABOUT_ME);
@@ -79,6 +87,14 @@ class TrainingContact extends AbstractModel implements TrainingContactInterface,
     public function setName($name)
     {
         return $this->setData(self::NAME, $name);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setImage($image)
+    {
+        return $this->setData(self::IMAGE, $image);
     }
 
     /**

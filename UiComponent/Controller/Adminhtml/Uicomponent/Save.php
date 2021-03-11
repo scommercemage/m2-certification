@@ -78,6 +78,8 @@ class Save extends Action implements HttpPostActionInterface
                 if (isset($data['is_active']) && $data['is_active'] === 'true') {
                     $data['is_active'] = true;
                 }
+
+
                 if (empty($data['id'])) {
                     $data['id'] = null;
                 }
@@ -93,6 +95,12 @@ class Save extends Action implements HttpPostActionInterface
                         $this->messageManager->addErrorMessage(__('This training contact no longer exists.'));
                         return $resultRedirect->setPath('*/*/');
                     }
+                }
+
+                // save image
+                if (isset($data["image"])) {
+                    $img = $data["image"][0];
+                    $data["image"] = $img["name"];
                 }
 
                 $model->setData($data);
